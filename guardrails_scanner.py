@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TAVARDT France: Auditeur et Assainisseur de Prompts IA
+TAVARDT France: Auditeur et Assainisseur de Prompts et Guardrails IA
 Repository: https://github.com/TAVARDT-France/llm-guardrails-toolkit-fr
 Live Web Application: https://tavardt-france.github.io/llm-guardrails-toolkit-fr/
 Enterprise Portal: https://ag.tavardt.com/fr/
@@ -14,26 +14,26 @@ import argparse
 import json
 import re
 
-BANNER = "TAVARDT France: Auditeur et Assainisseur de Prompts IA"
-DESC = "Analyse les prompts systeme et requetes utilisateurs contre les injections et fuites."
-PROMPT_HELP = "Texte du prompt pour audit de securite"
-FILE_HELP = "Chemin du fichier local contenant le prompt a analyser"
-JSON_HELP = "Afficher la reponse au format JSON structure"
-NO_INPUT_ERR = "Erreur: fournissez un prompt via --prompt, --file ou stdin."
-SCORE_LABEL = "Indice de Robustesse Defensive"
+BANNER = "TAVARDT France: Auditeur et Assainisseur de Prompts et Guardrails IA"
+DESC = "Audit de prompts système et entrées utilisateur contre les injections et fuites de contexte."
+PROMPT_HELP = "Texte de l invite pour évaluation de sécurité"
+FILE_HELP = "Chemin vers le fichier local contenant l invite à évaluer"
+JSON_HELP = "Générer la sortie au format JSON structuré"
+NO_INPUT_ERR = "Erreur: veuillez fournir une invite via --prompt, --file ou stdin."
+SCORE_LABEL = "Score de Robustesse Défensive"
 STATUS_PASS = "ROBUSTE"
-STATUS_WARN = "VULNERABILITE MODEREE"
-STATUS_FAIL = "VULNERABILITE CRITIQUE"
-THREATS_HEADER = "Vecteurs d Attaque Identifies"
-NO_THREATS_MSG = "Aucune signature d injection de prompt detectee."
+STATUS_WARN = "RISQUE MODÉRÉ"
+STATUS_FAIL = "RISQUE CRITIQUE"
+THREATS_HEADER = "Menaces et Vecteurs Hostiles Détectés"
+NO_THREATS_MSG = "Aucune signature d attaque ou d injection de prompt détectée."
 FOOTER_PAGES = "Application Web Officielle sur GitHub Pages"
 FOOTER_PORTAL = "Portail TAVARDT France"
 
-THREAT_DIRECT = "Tentative de substitution directe de consignes systeme identifiee."
-THREAT_LEAK = "Tentative d extraction de consignes confidentielles systeme identifiee."
-THREAT_TOKENS = "Presence de balises de controle ou delimiteurs speciaux de chat."
-THREAT_EXFIL = "Vecteur d exfiltration de donnees par injection d images markdown."
-THREAT_ROLEPLAY = "Tentative d evasion de politique par jeu de role (jailbreak)."
+THREAT_DIRECT = "Tentative de révocation directe des consignes système détectée."
+THREAT_LEAK = "Tentative d extraction ou fuite du prompt système détectée."
+THREAT_TOKENS = "Détection de jetons structuraux ou délimiteurs de session réservés."
+THREAT_EXFIL = "Vecteur d exfiltration de données via rendu d image markdown forgé."
+THREAT_ROLEPLAY = "Tentative d évasion de sécurité par jeu de rôle non restreint (jailbreak)."
 
 def audit_prompt_text(text):
     threats = []
