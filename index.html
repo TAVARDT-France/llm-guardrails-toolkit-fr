@@ -8,6 +8,18 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="canonical" href="https://tavardt-france.github.io/llm-guardrails-toolkit-fr/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tavardt-brasil.github.io/llm-guardrails-toolkit-br/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tavardt-portugal.github.io/llm-guardrails-toolkit-pt/">
+  <link rel="alternate" hreflang="en-US" href="https://tavardt-usa.github.io/llm-guardrails-toolkit-us/">
+  <link rel="alternate" hreflang="en-GB" href="https://tavardt-uk.github.io/llm-guardrails-toolkit-uk/">
+  <link rel="alternate" hreflang="en-CA" href="https://tavardt-canada.github.io/llm-guardrails-toolkit-ca/">
+  <link rel="alternate" hreflang="en-AU" href="https://tavardt-australia.github.io/llm-guardrails-toolkit-au/">
+  <link rel="alternate" hreflang="en-NZ" href="https://tavardt-new-zealand.github.io/llm-guardrails-toolkit-nz/">
+  <link rel="alternate" hreflang="es-ES" href="https://tavardt-espana.github.io/llm-guardrails-toolkit-es/">
+  <link rel="alternate" hreflang="es-MX" href="https://tavardt-mexico.github.io/llm-guardrails-toolkit-mx/">
+  <link rel="alternate" hreflang="fr-FR" href="https://tavardt-france.github.io/llm-guardrails-toolkit-fr/">
+  <link rel="alternate" hreflang="it-IT" href="https://tavardt-italia.github.io/llm-guardrails-toolkit-it/">
+  <link rel="alternate" hreflang="x-default" href="https://tavardt-usa.github.io/llm-guardrails-toolkit-us/">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TAVARDT">
@@ -64,14 +76,60 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Portail d'Outils",
+          "name": "Plateforme d'Outils",
           "item": "https://tools.tavardt.com/fr/"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Auditeur de Guardrails de LLM",
+          "name": "LLM Guardrails Toolkit",
           "item": "https://tavardt-france.github.io/llm-guardrails-toolkit-fr/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tavardt-france.github.io/llm-guardrails-toolkit-fr/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un toolkit de guardrails pour IA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est une passerelle logicielle défensive qui intercepte les requêtes et les réponses des LLMs pour garantir leur conformité et leur sécurité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre guardrails d'entrée et de sortie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les guardrails d'entrée bloquent les attaques avant le modèle ; ceux de sortie empêchent l'exfiltration de données confidentielles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment empêcher la fuite de données personnelles (PII) ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grâce à des modules de détection d'entités et des règles précises qui caviardent automatiquement les identifiants sensibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les filtres regex sont-ils suffisants pour sécuriser les LLMs ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Les attaquants contournent aisément les regex via des encodages variés. Une approche hybride sémantique et lexicale est indispensable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment TAVARDT garantit-elle une latence ultra-faible ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TAVARDT déploie les guardrails directement en périphérie via Cloudflare Workers, traitant les requêtes en moins de 15 ms."
+          }
         }
       ]
     }
@@ -643,6 +701,151 @@ textarea:focus, input[type="text"]:focus {
   color: #64748b !important;
 }
 
+
+/* ==========================================================================
+   TAVARDT UNIFIED 1200PX CONTAINER ALIGNMENT & AEO/GEO/FAQ DESIGN TOKENS
+   ========================================================================== */
+.container, .main-wrap, main, .tavardt-hero, .hero {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  box-sizing: border-box !important;
+}
+.card, .main-card, .panel, .stage-card, .results-section, .workspace-grid {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.aeo-card {
+  width: 100% !important;
+  background: #0e1526 !important;
+  border: 1px solid rgba(30, 0, 255, 0.3) !important;
+  border-left: 4px solid #1e00ff !important;
+  border-radius: 16px !important;
+  padding: 28px 32px !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.aeo-card h2 {
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+}
+.aeo-card p {
+  font-size: 0.98rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.7 !important;
+}
+.vectors-section {
+  width: 100% !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.vectors-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.vectors-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+}
+.vector-card {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+.vector-title {
+  font-size: 0.96rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+}
+.vector-desc {
+  font-size: 0.88rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.5 !important;
+}
+.faq-section {
+  width: 100% !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.faq-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.faq-item {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  margin-bottom: 14px !important;
+  padding: 18px 24px !important;
+  transition: border-color 0.2s !important;
+  box-sizing: border-box !important;
+}
+.faq-item[open] {
+  border-color: rgba(30, 0, 255, 0.4) !important;
+}
+.faq-question {
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 0.96rem !important;
+  color: #ffffff !important;
+  outline: none !important;
+}
+.faq-answer {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.6 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding-top: 12px !important;
+}
+.cta-card {
+  width: 100% !important;
+  background: linear-gradient(135deg, rgba(30, 0, 255, 0.2) 0%, rgba(11, 16, 30, 0.9) 100%) !important;
+  border: 1px solid rgba(30, 0, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 36px 32px !important;
+  text-align: center !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.cta-card h3 { font-size: 1.35rem !important; font-weight: 800 !important; margin-bottom: 10px !important; color: #ffffff !important; }
+.cta-card p { color: #94a3b8 !important; max-width: 720px !important; margin: 0 auto 24px !important; font-size: 0.98rem !important; }
+.cta-btns { display: flex !important; gap: 16px !important; justify-content: center !important; flex-wrap: wrap !important; }
+.btn-wa {
+  background: #1e00ff !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  padding: 14px 32px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 25px rgba(30, 0, 255, 0.6) !important;
+  transition: all 0.2s !important;
+  display: inline-block !important;
+}
+.btn-wa:hover { transform: translateY(-2px) !important; box-shadow: 0 0 35px rgba(30, 0, 255, 0.9) !important; }
+.btn-corp {
+  background: #0b101e !important;
+  color: #f8fafc !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: inline-block !important;
+}
 </style>
 </head>
 <body>
@@ -715,7 +918,74 @@ textarea:focus, input[type="text"]:focus {
     </div>
   </div>
 
-  <footer class="tavardt-footer">
+  <div class="container">
+
+  <!-- AEO CITABLE DEFINITION SECTION (100% WIDTH - 1200px) -->
+  <section class="aeo-card">
+    <h2>Qu'est-ce que le LLM Guardrails Toolkit ?</h2>
+    <p>Le LLM Guardrails Toolkit de TAVARDT est un framework défensif professionnel conçu pour inspecter, assainir et valider les flux d'entrée et de sortie des applications d'IA générative. Il intègre des clôtures sémantiques, la détection de fuite de données personnelles (PII) et la vérification des appels d'outils conforme au NIST AI RMF.</p>
+  </section>
+
+  <!-- GEO TECHNICAL VECTORS SECTION (100% WIDTH - 1200px) -->
+  <section class="vectors-section">
+    <h2>Vecteurs de Risque & Vulnérabilités Auditées</h2>
+    <div class="vectors-grid">
+      <div class="vector-card">
+        <h3 class="vector-title">Assainissement d'Entrée (Input Guard)</h3>
+        <p class="vector-desc">Filtrage préventif des prompts hostiles, des injections structurelles et des caractères de contrôle.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Protection contre les Fuites PII</h3>
+        <p class="vector-desc">Masquage et anonymisation en temps réel des numéros d'identité, coordonnées bancaires et mots de passe.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Contrôle d'Intégrité de Sortie</h3>
+        <p class="vector-desc">Analyse des réponses générées pour bloquer les hallucinations sévères et la divulgation de logique métier.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Sécurisation des Appels de Fonctions</h3>
+        <p class="vector-desc">Validation stricte des paramètres transmis aux API externes par les agents autonomes d'IA.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO/GEO FAQ SECTION (100% WIDTH - EXACTLY 5 FAQS) -->
+  <section class="faq-section">
+    <h2>Foire Aux Questions (FAQ) & Recommandations Techniques</h2>
+      <details class="faq-item">
+        <summary class="faq-question">Qu'est-ce qu'un toolkit de guardrails pour IA ?</summary>
+        <div class="faq-answer">C'est une passerelle logicielle défensive qui intercepte les requêtes et les réponses des LLMs pour garantir leur conformité et leur sécurité.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Quelle est la différence entre guardrails d'entrée et de sortie ?</summary>
+        <div class="faq-answer">Les guardrails d'entrée bloquent les attaques avant le modèle ; ceux de sortie empêchent l'exfiltration de données confidentielles.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Comment empêcher la fuite de données personnelles (PII) ?</summary>
+        <div class="faq-answer">Grâce à des modules de détection d'entités et des règles précises qui caviardent automatiquement les identifiants sensibles.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Les filtres regex sont-ils suffisants pour sécuriser les LLMs ?</summary>
+        <div class="faq-answer">Non. Les attaquants contournent aisément les regex via des encodages variés. Une approche hybride sémantique et lexicale est indispensable.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Comment TAVARDT garantit-elle une latence ultra-faible ?</summary>
+        <div class="faq-answer">TAVARDT déploie les guardrails directement en périphérie via Cloudflare Workers, traitant les requêtes en moins de 15 ms.</div>
+      </details>
+  </section>
+
+  <!-- DEFENSIVE HARDENING CTA -->
+  <div class="cta-card">
+    <h3>Besoin de Guardrails Haute Performance en Production ?</h3>
+    <p>L'ingénierie TAVARDT déploie des filtres d'I/O en temps réel, l'anonymisation PII et la protection périphérique Zero Trust.</p>
+    <div class="cta-btns">
+      <a class="btn-wa" href="https://wa.me/5584987721775?text=Bonjour%20Sofia%2C%20j%27ai%20utilis%C3%A9%20le%20LLM%20Guardrails%20Toolkit%20et%20souhaite%20d%C3%A9ployer%20des%20guardrails%20d%27entreprise%20sur%20notre%20infrastructure%20IA." target="_blank">Échange Direct avec Sofia (WhatsApp)</a>
+      <a class="btn-corp" href="https://ag.tavardt.com/fr/cybersecurite/" target="_blank" rel="noopener">Découvrir nos Solutions Cybersécurité</a>
+    </div>
+  </div>
+
+</div>
+<footer class="tavardt-footer">
   <div class="tavardt-footer-inner">
     <div class="tavardt-footer-col">
       <div class="tavardt-footer-logo">TAVARDT<span class="tavardt-brand-dot">.</span></div>
