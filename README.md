@@ -57,7 +57,13 @@ python guardrails_scanner.py -file prompt.txt -json
 
 - **Norme de Référence** : Recommandations de Sécurité pour l'IA et OWASP Top 10 LLM
 
+***
 
+## Liens Utiles
+
+* **Portail Entreprise:** https://ag.tavardt.com/fr/
+* **Suite de Diagnostic:** https://tools.tavardt.com/fr/
+* **Contact Technique:** https://ag.tavardt.com/fr/contact/
 
 ***
 
