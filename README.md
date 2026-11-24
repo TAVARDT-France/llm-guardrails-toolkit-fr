@@ -55,7 +55,6 @@ python guardrails_scanner.py -file prompt.txt -json
 
 ## Conformité et Normes Techniques
 
-- **Juridiction** : France
 - **Norme de Référence** : Recommandations de Sécurité pour l'IA et OWASP Top 10 LLM
 - **Organisation Responsable** : [TAVARDT-France](https://github.com/TAVARDT-France)
 
@@ -69,3 +68,7 @@ python guardrails_scanner.py -file prompt.txt -json
 
 ### Licence
 Distribué sous Licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
+
+***
+
+© 2026 TAVARDT. Tous droits réservés.
