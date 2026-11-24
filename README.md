@@ -5,7 +5,7 @@
 
 Protection défensive contre l'injection de prompt, la fuite de consignes système et l'exfiltration de données confidentielles.
 
-Conçu et maintenu par le pôle d'ingénierie de sécurité en intelligence artificielle de **TAVARDT France**.
+Conçu et maintenu par le pôle d'ingénierie de sécurité en intelligence artificielle de **TAVARDT**.
 
 ***
 
@@ -56,13 +56,8 @@ python guardrails_scanner.py -file prompt.txt -json
 ## Conformité et Normes Techniques
 
 - **Norme de Référence** : Recommandations de Sécurité pour l'IA et OWASP Top 10 LLM
-- **Organisation Responsable** : [TAVARDT-France](https://github.com/TAVARDT-France)
 
-## Portails Officiels
 
-- **Portail Institutionnel** : [Portal Institucional](https://ag.tavardt.com/fr/)
-- **Portail d'Outils** : [Central de Ferramentas](https://tools.tavardt.com/fr/)
-- **Canal de Support Technique** : [Canal de Contato](https://ag.tavardt.com/fr/contact/)
 
 ***
 
