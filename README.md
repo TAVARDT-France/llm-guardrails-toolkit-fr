@@ -6,8 +6,6 @@
 
 Protection défensive contre l'injection de prompt, la fuite de consignes système et l'exfiltration de données confidentielles.
 
-Conçu et maintenu par le pôle d'ingénierie de sécurité en intelligence artificielle de **TAVARDT**.
-
 ***
 
 ## Démonstration en Ligne et Audit dans le Navigateur
@@ -69,7 +67,7 @@ python guardrails_scanner.py -file prompt.txt -json
 ***
 
 ### Licence
-Distribué sous Licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
+Distribué sous Licence MIT.
 
 ***
 
